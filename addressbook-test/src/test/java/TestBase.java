@@ -18,7 +18,7 @@ public class TestBase {
             return false;
         }
     }
-
+    
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
