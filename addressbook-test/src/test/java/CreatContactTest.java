@@ -8,6 +8,7 @@ public class CreatContactTest extends TestBase {
     public void CreatContactTest() {
         //openaddress
         openaddress();
+        
         //login
         login("admin", "secret");
         //goToContactPage
