@@ -8,8 +8,19 @@ public class GroupDeletionTest extends TestBase {
     public void groupDeletionTest (){
         goToGroupsPage();
         selectGroup ();
+        clickButto ();
+        //returnGroup ();
 
 
+
+    }
+
+   // private void returnGroup() {
+   //     wd.findElement(By.name())
+    //}
+
+    private void clickButto() {
+        wd.findElement(By.name("delete")).click();
     }
 
     public void selectGroup() {
