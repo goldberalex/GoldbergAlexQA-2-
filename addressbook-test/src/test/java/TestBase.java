@@ -89,16 +89,16 @@ public abstract class TestBase {
         wd.findElement(By.name("selected[]")).click();
     }
 
-    
-    public void goToContactPage() {
-        wd.findElement(By.linkText("home")).click();
+
+    public void initContactCreation() {
+        //wd.findElement(By.linkText("add new")).click();
+        wd.findElement(By.xpath("//*[@href='edit.php']")).click();
     }
-    public void iniContactCreation() {
-        wd.findElement(By.linkText("add new")).click();
-    }
+
     public void fillContactForm() {
         fillContactForm("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba");
     }
+
     public void submitContactCreation() {
         wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
     }
@@ -107,6 +107,7 @@ public abstract class TestBase {
     public void tearDown() {
         wd.quit();
     }
+
     public void fillContactForm(String alex, String goldber, String goldberalex, String f, String bearSheva, String bearSheba) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
@@ -144,6 +145,7 @@ public abstract class TestBase {
     public void clickButtonDelete() {
         wd.findElement(By.xpath("//*[@value='Delete']")).click();
     }
+
     public void selectContact() {
         wd.findElement(By.name("selected[]")).click();
     }

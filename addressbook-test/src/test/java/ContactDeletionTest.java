@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 public class ContactDeletionTest extends TestBase{
     @Test
    public void contactDeletionTest (){
-        goToContactPage();
         selectContact ();
         clickButtonDelete ();
         confirmAlert();
