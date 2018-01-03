@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 public class GroupDeletionTest extends TestBase {
     @Test
     public void GroupDeletionTest(){
-        openaddress();
-        login("admin", "secret");
         goToGroupsPage();
         selectGroup ();
         clickButtonDeleteGroup ();

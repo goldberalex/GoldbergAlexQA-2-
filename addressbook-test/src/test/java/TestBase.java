@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public abstract class TestBase {
     FirefoxDriver wd;
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
@@ -23,8 +23,9 @@ public class TestBase {
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        openaddress();
+        login("admin", "secret");
     }
-
     public void openaddress() {
         wd.get("http://localhost/addressbook/");
     }
@@ -73,6 +74,9 @@ public class TestBase {
     }
 
     public void  goToContactPage () {
+        wd.findElement(By.linkText("home")).click();
+    }
+    public void  iniContactCreation () {
         wd.findElement(By.linkText("add new")).click();
     }
 

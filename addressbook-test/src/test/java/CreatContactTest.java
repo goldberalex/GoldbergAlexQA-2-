@@ -6,9 +6,8 @@ public class CreatContactTest extends TestBase {
 
     @Test
     public void CreatContactTest() {
-        openaddress();
-        login("admin", "secret");
         goToContactPage ();
+        iniContactCreation ();
         fillContactForm ();
         submitContactCreation ();
 

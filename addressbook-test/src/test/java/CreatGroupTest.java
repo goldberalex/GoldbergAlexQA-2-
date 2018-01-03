@@ -6,8 +6,6 @@ public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
-        openaddress();
-        login("admin", "secret");
         goToGroupsPage ();
         iniGroupCreation ();
         fillGreoupForm ();

@@ -5,15 +5,13 @@ import org.openqa.selenium.By;
 public class ContactDeletionTest extends TestBase{
     @Test
    public void contactDeletionTest (){
-        openaddress();
-        login("admin", "secret");
         goToContactPage();
         selectContact ();
         clickButtonDelete ();
     }
 
     public void clickButtonDelete() {
-        wd.findElement(By.linkText("Delete")).click();
+        wd.findElement(By.xpath("//*[@value='Delete']")).click();
     }
 
     public void selectContact() {
