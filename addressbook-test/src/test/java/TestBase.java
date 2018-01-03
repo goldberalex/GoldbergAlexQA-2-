@@ -18,7 +18,7 @@ public class TestBase {
             return false;
         }
     }
-    
+
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
@@ -50,6 +50,38 @@ public class TestBase {
 
     public void openaddress() {
         wd.get("http://localhost/addressbook/");
+    }
+
+    public void  goToGroupsPage() {
+        wd.findElement(By.linkText("groups")).click();
+    }
+
+    public void  iniGroupCreation() {
+        wd.findElement(By.name("new")).click();
+    }
+
+    public void  fillGreoupForm() {
+        fillGreoupForm("name", "header", "footer");
+    }
+
+    public void  submitGroupCreation () {
+        wd.findElement(By.name("submit")).click();
+    }
+
+    public void  returnToGropsPage (){
+        wd.findElement(By.linkText("group page")).click();
+    }
+
+    public void  goToContactPage () {
+        wd.findElement(By.linkText("add new")).click();
+    }
+
+    public void  fillContactForm () {
+        fillContactForm("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba");
+    }
+
+    public void  submitContactCreation () {
+        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
     }
 
     @AfterMethod
