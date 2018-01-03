@@ -40,12 +40,11 @@ public abstract class TestBase {
         wd.findElement(By.name("pass")).click();
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys(secret);
-        wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
-        // wd.findElement(By.xpath("//form[@name='LoginForm']/input[3]")).click();
+        wd.findElement(By.xpath("//*[@value='Login']")).click();//кнопка enter
     }
 
     public void goToGroupsPage() {
-        wd.findElement(By.linkText("groups")).click();
+        wd.findElement(By.xpath("//*[@href='group.php']")).click();//кнопка groups
     }
 
     public void fillGreoupForm(String name, String header, String footer) {
@@ -61,7 +60,7 @@ public abstract class TestBase {
     }
 
     public void iniGroupCreation() {
-        wd.findElement(By.name("new")).click();
+        wd.findElement(By.name("new")).click();//кнопка new group
     }
 
     public void fillGreoupForm() {
@@ -69,20 +68,20 @@ public abstract class TestBase {
     }
 
     public void submitGroupCreation() {
-        wd.findElement(By.name("submit")).click();
+        wd.findElement(By.name("submit")).click();//кнопка enter
     }
 
     public void returnToGropsPage() {
-        wd.findElement(By.linkText("group page")).click();
+        wd.findElement(By.xpath("//*[@href='group.php']")).click();//кнопка groups и group page
     }
 
 
-    public void returnGroup() {
+   /* public void returnGroup() {
         wd.findElement(By.linkText("group page")).click();
-    }
+    }*/
 
-    public void clickButtonDeleteGroup() {
-        wd.findElement(By.name("delete")).click();
+    public void clickButtonDeleteGroup() {//удаление группы
+        wd.findElement(By.name("delete")).click();//кнопка Delete groups
     }
 
     public void selectGroup() {
@@ -91,8 +90,7 @@ public abstract class TestBase {
 
 
     public void initContactCreation() {
-        //wd.findElement(By.linkText("add new")).click();
-        wd.findElement(By.xpath("//*[@href='edit.php']")).click();
+        wd.findElement(By.xpath("//*[@href='edit.php']")).click();//кнопка add new
     }
 
     public void fillContactForm() {
@@ -100,7 +98,7 @@ public abstract class TestBase {
     }
 
     public void submitContactCreation() {
-        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+        wd.findElement(By.name("submit")).click();//кнопка enter
     }
 
     @AfterClass
@@ -143,7 +141,7 @@ public abstract class TestBase {
 
 
     public void clickButtonDelete() {
-        wd.findElement(By.xpath("//*[@value='Delete']")).click();
+        wd.findElement(By.xpath("//*[@value='Delete']")).click();//кнопка Delete контакт
     }
 
     public void selectContact() {

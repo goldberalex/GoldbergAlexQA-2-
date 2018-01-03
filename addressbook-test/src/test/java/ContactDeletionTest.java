@@ -10,6 +10,6 @@ public class ContactDeletionTest extends TestBase{
         confirmAlert();
     }
     private void confirmAlert() {
-        wd.switchTo().alert().accept();
+        wd.switchTo().alert().accept();//
     }
 }

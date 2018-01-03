@@ -8,7 +8,7 @@ public class GroupDeletionTest extends TestBase {
         goToGroupsPage();
         selectGroup ();
         clickButtonDeleteGroup ();
-        returnGroup ();
+        returnToGropsPage();
     }
 
 
