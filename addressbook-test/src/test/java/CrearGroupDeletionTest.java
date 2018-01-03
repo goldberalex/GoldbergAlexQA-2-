@@ -2,7 +2,7 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class GroupDeletionTest extends TestBase {
+public class CrearGroupDeletionTest extends TestBase {
     @Test
     public void groupDeletionTest (){
         goToGroupsPage();
