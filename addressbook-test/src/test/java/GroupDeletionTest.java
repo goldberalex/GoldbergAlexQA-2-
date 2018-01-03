@@ -1,17 +1,16 @@
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 
 public class GroupDeletionTest extends TestBase {
     @Test
-    public void GroupDeletionTest (){
+    public void GroupDeletionTest(){
+        openaddress();
+        login("admin", "secret");
         goToGroupsPage();
         selectGroup ();
         clickButtonDeleteGroup ();
         returnGroup ();
-
-
-
     }
     public void returnGroup() {
         wd.findElement(By.linkText("group page")).click();
