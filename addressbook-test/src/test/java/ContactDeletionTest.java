@@ -6,10 +6,15 @@ public class ContactDeletionTest extends TestBase{
    public void contactDeletionTest (){
         goToContactPage();
         selectContact ();
+        clickButtonDelete ();
 
     }
 
-    private void selectContact() {
+    public void clickButtonDelete() {
+        wd.findElement(By.linkText("Delete")).click();
+    }
+
+    public void selectContact() {
         wd.findElement(By.name("selected[]")).click();
     }
 }

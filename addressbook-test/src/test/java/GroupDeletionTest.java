@@ -1,5 +1,4 @@
 
-
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -9,17 +8,16 @@ public class GroupDeletionTest extends TestBase {
         goToGroupsPage();
         selectGroup ();
         clickButtonDeleteGroup ();
-        //returnGroup ();
+        returnGroup ();
 
 
 
     }
+    public void returnGroup() {
+        wd.findElement(By.linkText("group page")).click();
+    }
 
-   // private void returnGroup() {
-   //     wd.findElement(By.)
-    //}
-
-    private void clickButtonDeleteGroup() {
+    public void clickButtonDeleteGroup() {
         wd.findElement(By.name("delete")).click();
     }
 
