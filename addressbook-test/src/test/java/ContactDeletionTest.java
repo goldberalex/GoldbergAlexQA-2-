@@ -8,13 +8,9 @@ public class ContactDeletionTest extends TestBase{
         goToContactPage();
         selectContact ();
         clickButtonDelete ();
+        confirmAlert();
     }
-
-    public void clickButtonDelete() {
-       // wd.switchTo()
-    }
-
-    public void selectContact() {
-        wd.findElement(By.name("selected[]")).click();
+    private void confirmAlert() {
+        wd.switchTo().alert().accept();
     }
 }
