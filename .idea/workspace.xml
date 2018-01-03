@@ -61,9 +61,11 @@
       <file leaf-file-name="CreatGroupTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatGroupTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="250">
               <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="19" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +73,8 @@
       <file leaf-file-name="CreatContactTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatContactTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="50">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -81,8 +83,8 @@
       <file leaf-file-name="GroupDeletionTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/GroupDeletionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="300">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#405#406#0" expanded="true" />
@@ -111,7 +113,7 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="1175">
               <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -791,10 +793,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
@@ -819,7 +821,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CreatGroupTest">
+  <component name="RunManager" selected="TestNG.GroupDeletionTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -1044,9 +1046,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.CreatGroupTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ContactDeletionTest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.GroupDeletionTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.GroupDeletionTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.CreatGroupTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ContactDeletionTest" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.GroupDeletionTest.groupDeletionTest" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.ClearGroupDeletionTest" />
       </list>
@@ -1069,25 +1071,22 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClearGroupDeletionTest - 2018.01.03 at 13h 02m 55s.xml">
-      <configuration name="ClearGroupDeletionTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactDeletionTest - 2018.01.03 at 13h 17m 16s.xml">
       <configuration name="ContactDeletionTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="ContactDeletionTest - 2018.01.03 at 14h 12m 29s.xml">
       <configuration name="ContactDeletionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CreatGroupDeletionTest - 2018.01.03 at 12h 56m 44s.xml">
-      <configuration name="CreatGroupDeletionTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CreatGroupDeletionTest - 2018.01.03 at 12h 57m 53s.xml">
-      <configuration name="CreatGroupDeletionTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="CreatGroupTest - 2018.01.03 at 14h 12m 38s.xml">
       <configuration name="CreatGroupTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CreatGroupTest - 2018.01.03 at 14h 14m 52s.xml">
+      <configuration name="CreatGroupTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreatGroupTest - 2018.01.03 at 17h 32m 39s.xml">
+      <configuration name="CreatGroupTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreatGroupTest - 2018.01.03 at 17h 32m 51s.xml">
       <configuration name="CreatGroupTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="GroupDeletionTest - 2018.01.03 at 13h 11m 09s.xml">
@@ -1096,8 +1095,11 @@
     <history-entry file="GroupDeletionTest - 2018.01.03 at 13h 13m 03s.xml">
       <configuration name="GroupDeletionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupDeletionTest_groupDeletionTest - 2018.01.03 at 13h 08m 36s.xml">
-      <configuration name="GroupDeletionTest.groupDeletionTest" configurationId="TestNG" />
+    <history-entry file="GroupDeletionTest - 2018.01.03 at 17h 27m 34s.xml">
+      <configuration name="GroupDeletionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GroupDeletionTest - 2018.01.03 at 17h 35m 27s.xml">
+      <configuration name="GroupDeletionTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1461,9 +1463,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatContactTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="1175">
           <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1489,11 +1499,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatContactTest.java">
+    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatGroupTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="250">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1509,18 +1521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/CreatGroupTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/GroupDeletionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#405#406#0" expanded="true" />
@@ -1584,11 +1588,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>addressbook-test</last-edited>
+          <last-edited>addressbook-test_main|addressbook-test</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
