@@ -11,7 +11,7 @@ public class ContactDeletionTest extends TestBase{
     }
 
     public void clickButtonDelete() {
-        wd.findElement(By.xpath("//*[@value='Delete']")).click();
+       // wd.switchTo()
     }
 
     public void selectContact() {
