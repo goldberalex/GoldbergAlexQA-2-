@@ -6,7 +6,7 @@ public class CreatContactTest extends TestBase {
     @Test
     public void CreatContactTest() {
         initContactCreation();
-        fillContactForm();
+        fillContactForm();  
         submitContactCreation();
 
     }
