@@ -6,8 +6,8 @@ public class GroupDeletionTest extends TestBase {
     @Test
     public void GroupDeletionTest(){
         goToGroupsPage();
-        selectGroup ();
-        clickButtonDeleteGroup ();
+        selectGroup();
+        clickButtonDeleteGroup();
         returnToGropsPage();
     }
 

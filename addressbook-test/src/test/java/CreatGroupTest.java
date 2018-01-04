@@ -6,11 +6,11 @@ public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
-        goToGroupsPage ();
-        iniGroupCreation ();
-        fillGreoupForm ();
-        submitGroupCreation ();
-        returnToGropsPage ();
+        goToGroupsPage();
+        iniGroupCreation();
+        fillGreoupForm();
+        submitGroupCreation();
+        returnToGropsPage();
     }
 
 }
