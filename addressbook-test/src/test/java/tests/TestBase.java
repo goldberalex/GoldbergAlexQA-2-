@@ -24,7 +24,7 @@ public abstract class TestBase {
     }
 
     @BeforeClass
-    public void setUp(String password, String userName) throws Exception {
+    public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         openaddress();
@@ -56,18 +56,18 @@ public abstract class TestBase {
         wd.findElement(locator).click();
     }
 
-    public void fillGreoupForm(GroupData groupData, String userName) {
-        type(By.name("group_name"), userName);
-        type(By.name("group_header"), userName);
-        type(By.name("group_footer"), userName);
+    public void fillGreoupForm(GroupData groupData) {
+        type(By.name("group_name"));
+        type(By.name("group_header"));
+        type(By.name("group_footer"));
     }
 
     public void iniGroupCreation() {
         click(By.name("new"));
     }
 
-    public void fillGreoupForm(String userName) {
-        fillGreoupForm(new GroupData("name", "header", "footer"), userName);
+    public void fillGreoupForm() {
+        fillGreoupForm(new GroupData("name", "header", "footer"));
     }
 
     public void submitGroupCreation() {
@@ -96,8 +96,8 @@ public abstract class TestBase {
         click(By.xpath("//*[@href='edit.php']"));
     }
 
-    public void fillContactForm(String userName) {
-        fillContactForm(new ContactData("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba"), userName);
+    public void fillContactForm() {
+        fillContactForm(new ContactData("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba"));
     }
 
     public void submitContactCreation() {
@@ -109,13 +109,13 @@ public abstract class TestBase {
         wd.quit();
     }
 
-    public void fillContactForm(ContactData contactData, String userName) {
-        type(By.name("firstname"), userName);
-        type(By.name("lastname"), userName);
-        type(By.name("nickname"), userName);
-        type(By.name("company"), userName);
-        type(By.name("address"), userName);
-        type(By.name("home"), userName);
+    public void fillContactForm(ContactData contactData) {
+        type(By.name("firstname"));
+        type(By.name("lastname"));
+        type(By.name("nickname"));
+        type(By.name("company"));
+        type(By.name("address"));
+        type(By.name("home"));
     }
 
     public void confirmAlert() {
