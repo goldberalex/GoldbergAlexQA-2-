@@ -10,6 +10,7 @@ public class CardDeletionTest extends TestBase{
     }
 
     public void clickButtonArchive() {
+        wd.findElement(By.xpath()).click();
     }
 
     public void selectCard() {
