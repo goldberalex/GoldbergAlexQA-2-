@@ -73,8 +73,8 @@
       <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/applicationManager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="43" selection-end-column="24" />
+            <state relative-caret-position="400">
+              <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -95,12 +95,10 @@
       <file leaf-file-name="CardDeletionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/CardDeletionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            <state relative-caret-position="475">
+              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#417#418#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,10 +131,16 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+            <state relative-caret-position="-50">
+              <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1791#1792#0" expanded="true" />
+                <element signature="e#2172#2173#0" expanded="true" />
+                <element signature="e#2216#2217#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -989,9 +993,9 @@
         <option value="$PROJECT_DIR$/addressbook-test/src/test/java/applicationManager/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/addressbookTrello/build.gradle" />
         <option value="$PROJECT_DIR$/addressbookTrello/src/test/java/CreatСard.java" />
-        <option value="$PROJECT_DIR$/addressbookTrello/src/test/java/TestBase.java" />
         <option value="$PROJECT_DIR$/addressbookTrello/src/test/java/CreatСardTest.java" />
         <option value="$PROJECT_DIR$/addressbookTrello/src/test/java/CardDeletionTest.java" />
+        <option value="$PROJECT_DIR$/addressbookTrello/src/test/java/TestBase.java" />
       </list>
     </option>
   </component>
@@ -1148,7 +1152,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CardDeletionTest">
+  <component name="RunManager" selected="TestNG.CreatСardTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -1373,8 +1377,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.CardDeletionTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.CreatСardTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.CreatСardTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.CardDeletionTest" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.CreatСardTest.creatСard" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.GroupDeletionTest" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.CreatGroupTest" />
@@ -1398,9 +1402,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CardDeletionTest - 2018.01.09 at 18h 17m 25s.xml">
-      <configuration name="CardDeletionTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="CardDeletionTest - 2018.01.09 at 18h 28m 42s.xml">
       <configuration name="CardDeletionTest" configurationId="TestNG" />
     </history-entry>
@@ -1416,13 +1417,16 @@
     <history-entry file="CardDeletionTest - 2018.01.09 at 18h 58m 34s.xml">
       <configuration name="CardDeletionTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CreatСardTest - 2018.01.09 at 15h 21m 02s.xml">
-      <configuration name="CreatСardTest" configurationId="TestNG" />
+    <history-entry file="CardDeletionTest - 2018.01.09 at 20h 46m 44s.xml">
+      <configuration name="CardDeletionTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CreatСardTest - 2018.01.09 at 15h 40m 37s.xml">
       <configuration name="CreatСardTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CreatСardTest - 2018.01.09 at 17h 34m 06s.xml">
+      <configuration name="CreatСardTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CreatСardTest - 2018.01.09 at 20h 55m 50s.xml">
       <configuration name="CreatСardTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="CreatСardTest_CreatСard - 2018.01.09 at 15h 24m 45s.xml">
@@ -1439,9 +1443,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12042503" sideWeight="0.09567568" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43447462" sideWeight="0.09567568" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12042503" sideWeight="0.90432435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43447462" sideWeight="0.90432435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1775,14 +1779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/applicationManager/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="43" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/tests/ContactDeletionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1807,25 +1803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/TestBase.java">
+    <entry file="file://$PROJECT_DIR$/addressbook-test/src/test/java/applicationManager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/CardDeletionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,6 +1817,32 @@
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/CardDeletionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbookTrello/src/test/java/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="49" column="23" lean-forward="false" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2216#2217#0" expanded="true" />
           </folding>
         </state>
       </provider>

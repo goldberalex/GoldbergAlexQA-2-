@@ -13,11 +13,11 @@ public class CardDeletionTest extends TestBase{
     }
 
     public void clickButtonArchive() {
-        wd.findElement(By.xpath()).click();
+       // wd.findElement(By.xpath()).click();
     }
 
     public void selectCard() {
-        wd.findElement(By.xpath("//div[@id('board')]/div[3]/div[1]/div[2]/a[1]/span[1]")).click();
+       // wd.findElement(By.xpath("//div[@id('board')]/div[3]/div[1]/div[2]/a[1]/span[1]")).click();
     }
 }
 

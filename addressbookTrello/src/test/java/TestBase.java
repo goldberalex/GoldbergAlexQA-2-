@@ -3,9 +3,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,34 +30,40 @@ public class TestBase {
     }
 
     public void returnToProject() {
-        wd.findElement(By.cssSelector("span.header-logo-default")).click();
-        wd.findElement(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']")).click();
+        click(By.cssSelector("span.header-logo-default"));
+        click(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']"));
     }
 
     public void creatСardNew(String text) {
-        wd.findElement(By.xpath("//div[@id='board']/div[3]/div/div[1]/div[2]/a/span")).click();
-        wd.findElement(By.cssSelector("a.js-add-card")).click();
+        click(By.xpath("//div[@id='board']/div[3]/div/div[1]/div[2]/a/span"));
+        click(By.cssSelector("a.js-add-card"));
         wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).clear();
         wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).sendKeys(text);
-        wd.findElement(By.xpath("//div[@class='card-composer']/div[2]/div[1]/input")).click();
+        click(By.xpath("//div[@class='card-composer']/div[2]/div[1]/input"));
     }
 
     public void goToProject() {
-        wd.findElement(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']")).click();
+        click(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']"));
+    }
+
+    public void click(By locator) {
+        wd.findElement(locator).click();
     }
 
     public void login(String UserName, String password) {
-        wd.findElement(By.id("user")).click();
-        wd.findElement(By.id("user")).clear();
-        wd.findElement(By.id("user")).sendKeys(UserName);
-        wd.findElement(By.id("password")).click();
-        wd.findElement(By.id("password")).clear();
-        wd.findElement(By.id("password")).sendKeys(password);
-        wd.findElement(By.id("login")).click();
+        type(By.id("user"), UserName);
+        type(By.id("password"), password);
+        click(By.id("login"));
+    }
+
+    public void type(By locator, String text) {
+        click(locator);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
     }
 
     public void openloginpage() {
-        wd.findElement(By.linkText("Log In")).click();
+        click(By.linkText("Log In"));
     }
 
     public void openaddress() {
