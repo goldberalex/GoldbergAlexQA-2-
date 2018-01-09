@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="addressbook-test_main" target="1.8" />
       <module name="addressbook-test_test" target="1.8" />
+      <module name="addressbookTrello_main" target="1.8" />
+      <module name="addressbookTrello_test" target="1.8" />
       <module name="GoldbergAlexQA-2-_main" target="1.8" />
       <module name="GoldbergAlexQA-2-_test" target="1.8" />
     </bytecodeTargetLevel>

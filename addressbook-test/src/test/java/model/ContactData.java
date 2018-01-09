@@ -37,7 +37,5 @@ public class ContactData {
         return bearSheva;
     }
 
-    public String getBearSheba() {
-        return bearSheba;
-    }
+    public String getBearSheba() { return bearSheba; }
 }

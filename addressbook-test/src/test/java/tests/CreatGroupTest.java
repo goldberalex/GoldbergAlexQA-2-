@@ -10,15 +10,17 @@ public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
-        goToGroupsPage();
-        int before = wd.findElements(By.name("selected[]")).size();//посчитали группы до добавления
+        app.goToGroupsPage();
+        int before = app.getGroupCout();//посчитали группы до добавления
         iniGroupCreation();
-        fillGreoupForm(new GroupData("name", "header", "footer"));
-        submitGroupCreation();
-        returnToGropsPage();
-        int after = wd.findElements(By.name("selected[]")).size();//посчитали группы после добавления
+        app.fillGreoupForm(new GroupData("name", "header", "footer"));
+        app.submitGroupCreation();
+        app.returnToGropsPage();
+        int after = app.getGroupCout();//посчитали группы после добавления
         Assert.assertEquals(after, before+1);
 
     }
+
+
 
 }

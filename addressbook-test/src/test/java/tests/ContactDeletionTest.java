@@ -8,11 +8,13 @@ import org.testng.annotations.Test;
 public class ContactDeletionTest extends TestBase{
     @Test
    public void contactDeletionTest(){
-        int before = wd.findElements(By.xpath("//*[@src='icons/status_online.png']")).size();
-        selectContact();
-        clickButtonDelete();
-        confirmAlert();
-        int after = wd.findElements(By.xpath("//*[@src='icons/status_online.png']")).size();
+        int before = app.getContactCoutDeletion();
+        app.selectContact();
+        app.clickButtonDelete();
+        app.confirmAlert();
+        int after = app.getContactCoutDeletion();
         Assert.assertEquals(after, before-1);
     }
+
+
 }

@@ -7,15 +7,14 @@ import org.openqa.selenium.By;
 public class GroupDeletionTest extends TestBase {
     @Test
     public void GroupDeletionTest(){
-        goToGroupsPage();
-        int before = wd.findElements(By.name("selected[]")).size();
-        selectGroup();
-        clickButtonDeleteGroup();
-        returnToGropsPage();
-        int after = wd.findElements(By.name("selected[]")).size();
+        app.goToGroupsPage();
+        int before = app.getGroupCoutDeletion();
+        app.selectGroup();
+        app.clickButtonDeleteGroup();
+        app.returnToGropsPage();
+        int after = app.getGroupCoutDeletion();
         Assert.assertEquals(after, before-1);
     }
-
 
 
 }
