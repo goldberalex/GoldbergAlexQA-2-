@@ -1,35 +1,34 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
-import java.util.Date;
-import java.io.File;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.*;
-import static org.openqa.selenium.OutputType.*;
 
-public class CreatСard {
+public class TestBase {
     FirefoxDriver wd;
-    
-    @BeforeMethod
+
+    public static boolean isAlertPresent(FirefoxDriver wd) {
+        try {
+            wd.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+
+    @BeforeClass
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-    
-    @Test
-    public void CreatСard() {
         openaddress();
         openloginpage();
-        login();
+        login("goldbergalex1981@gmail.com", "171981zx");
         goToProject();
-        CreatСardNew();
-        returnToProject();
     }
 
     public void returnToProject() {
@@ -37,11 +36,11 @@ public class CreatСard {
         wd.findElement(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']")).click();
     }
 
-    public void CreatСardNew() {
+    public void creatСardNew(String text) {
         wd.findElement(By.xpath("//div[@id='board']/div[3]/div/div[1]/div[2]/a/span")).click();
         wd.findElement(By.cssSelector("a.js-add-card")).click();
         wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).clear();
-        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).sendKeys("Tema");
+        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).sendKeys(text);
         wd.findElement(By.xpath("//div[@class='card-composer']/div[2]/div[1]/input")).click();
     }
 
@@ -49,13 +48,13 @@ public class CreatСard {
         wd.findElement(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']")).click();
     }
 
-    public void login() {
+    public void login(String UserName, String password) {
         wd.findElement(By.id("user")).click();
         wd.findElement(By.id("user")).clear();
-        wd.findElement(By.id("user")).sendKeys("goldbergalex1981@gmail.com");
+        wd.findElement(By.id("user")).sendKeys(UserName);
         wd.findElement(By.id("password")).click();
         wd.findElement(By.id("password")).clear();
-        wd.findElement(By.id("password")).sendKeys("171981zx");
+        wd.findElement(By.id("password")).sendKeys(password);
         wd.findElement(By.id("login")).click();
     }
 
@@ -67,17 +66,8 @@ public class CreatСard {
         wd.get("https://trello.com/");
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
         wd.quit();
-    }
-    
-    public static boolean isAlertPresent(FirefoxDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
     }
 }
