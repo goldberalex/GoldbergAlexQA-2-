@@ -28,13 +28,27 @@ public class ApplicationManager {
         login("goldbergalex1981@gmail.com", "171981zx");
         goToProject();
     }
+
+    public int getCardCoutDeletion() {
+        return wd.findElements(By.xpath("//div[@class='board-canvas']//span[@class='list-card-title js-card-name']")).size();
+    }
+    public int getCardCout() {
+        return wd.findElements(By.xpath("//div[@class='board-canvas']//span[@class='list-card-title js-card-name']")).size();
+    }
+
+    public void clickButtonDelete() {
+        click(By.xpath("//div[@class='u-clearfix']//a[@class='button-link negate js-delete-card']"));
+    }
+
     public void clickButtonArchive() {
-        //???????? Лена я не знаю как прописасть здесь что ему искать, по какому параметру?
+        click(By.xpath("//div[@class='window-sidebar']//a[@class='button-link js-archive-card']"));
     }
 
     public void selectCard() {
-        //click(By.xpath("//div[@id='board']//span[.='#37Tema']"));???????? Лена я не знаю как прописасть здесь что ему искать, по какому параметру?
+    click(By.xpath("//div[@class='board-canvas']//span[@class='list-card-title js-card-name']"));
     }
+
+
 
     public void returnToProject() {
         click(By.cssSelector("span.header-logo-default"));
