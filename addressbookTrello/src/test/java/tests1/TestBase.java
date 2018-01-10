@@ -1,3 +1,6 @@
+package tests1;
+
+import model1.CardData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -34,11 +37,11 @@ public class TestBase {
         click(By.xpath("//ul[@class='boards-page-board-section-list']//span[.='Проект 1']"));
     }
 
-    public void creatСardNew(String text) {
+    public void creatСardNew(CardData cardData) {
         click(By.xpath("//div[@id='board']/div[3]/div/div[1]/div[2]/a/span"));
         click(By.cssSelector("a.js-add-card"));
-        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).clear();
-        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).sendKeys(text);
+        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).clear();//,это переменная text "Тема"
+        wd.findElement(By.cssSelector("textarea.list-card-composer-textarea.js-card-title")).sendKeys(cardData.getText());
         click(By.xpath("//div[@class='card-composer']/div[2]/div[1]/input"));
     }
 
