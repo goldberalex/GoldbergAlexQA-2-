@@ -28,6 +28,13 @@ public class ApplicationManager {
         login("goldbergalex1981@gmail.com", "171981zx");
         goToProject();
     }
+    public void clickButtonArchive() {
+        //???????? Лена я не знаю как прописасть здесь что ему искать, по какому параметру?
+    }
+
+    public void selectCard() {
+        //click(By.xpath("//div[@id='board']//span[.='#37Tema']"));???????? Лена я не знаю как прописасть здесь что ему искать, по какому параметру?
+    }
 
     public void returnToProject() {
         click(By.cssSelector("span.header-logo-default"));
@@ -70,7 +77,6 @@ public class ApplicationManager {
         wd.get("https://trello.com/");
     }
 
-    public void stop() {
-        wd.quit();
+    public void stop() { wd.quit();
     }
 }
