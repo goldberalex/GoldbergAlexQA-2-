@@ -9,6 +9,9 @@ public class GroupDeletionTest extends TestBase {
     public void GroupDeletionTest(){
         app.goToGroupsPage();
         int before = app.getGroupCoutDeletion();
+        //выделяем строчку wd.findElements(By.name("selected[]")).size();
+        // далее ctrl->alt-> называем этот метод getGroupCout, он спросит применить к остальным?,
+        // нажимаем кнопку ОК и далее метод что появится ниже перетаскиваем его в ApplicationManager
         app.selectGroup();
         app.clickButtonDeleteGroup();
         app.returnToGropsPage();
