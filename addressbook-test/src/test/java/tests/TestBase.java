@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 public abstract class TestBase {// это мы делаем Refactor+Extract+Replace Inheritance with Delegation
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected ApplicationManager app = new ApplicationManager();
 
     @BeforeClass
     public void setUp() throws Exception {
@@ -15,7 +15,7 @@ public abstract class TestBase {// это мы делаем Refactor+Extract+Rep
     }
 
     public void iniGroupCreation() {
-        app.click(By.name("new"));
+        app.getGroupHelper().click(By.name("new"));
     }
 
     @AfterClass
