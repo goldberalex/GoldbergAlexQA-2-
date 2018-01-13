@@ -8,7 +8,7 @@ public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
-        app.getNavigationHeleper().goToGroupsPage();
+        app.getNavigationHeleper().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
         int before = app.getGroupHelper().getGroupCout();//посчитали группы до добавления
         iniGroupCreation();
         app.getGroupHelper().fillGreoupForm(new GroupData("name", "header", "footer"));

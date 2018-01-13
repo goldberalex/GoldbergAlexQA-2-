@@ -8,11 +8,13 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager {
-    FirefoxDriver wd;
-
-    public GroupHelper groupHelper;
-    public NavigationHeleper navigationHeleper;
+public class ApplicationManager {//1.Наследует GroupHelper (сначала создали помошника GroupHelper, потом делегировавали и теперь ApplicationManager уже на родитель он наследник)
+    FirefoxDriver wd;//5.Копируем ссылку (FirefoxDriver wd;)
+    // из GroupHelper и вставляем ее на место где она была в public class ApplicationManager {}
+//groupHelper объявляем здесь
+    public GroupHelper groupHelper;//8. а public GroupHelper groupHelper; мы переписываем в ручную, на то что сейчас
+    public NavigationHeleper navigationHeleper;//11.обявляем, даем сылку на него
+    public ContactHelper contactHelper;
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
@@ -22,13 +24,20 @@ public class ApplicationManager {
             return false;
         }
     }
-
+//2.Второй шаг все методы отвечающие групы поднимаем в GroupHelper, кроме goToGroupsPage(), ее мы отправим в NavigationHeleper
+//3. Меняем наследование на делегирование: это мы делаем Refactor+Extract+Replace Inheritance with Delegation
+// и здесь нужно !обязательно поставить галочку Generate getter
     public void start() {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
+        //6.перед всеми (wd)появится переуменная groupHelper !Эта переменная не нужна, ее нужно удалить везде где она появилась перед wb
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         openaddress();
-        groupHelper = new GroupHelper(wd);
-        navigationHeleper = new NavigationHeleper(wd);
+        //а здесь мы groupHelper иницилизируем
+        groupHelper = new GroupHelper(wd);//7.эту строчку мы создаем путем копирования из public GroupHelper groupHelper;
+      //8. когда (wd) подчеурнется красным кликаем на него правой кнопкой мыши и предложено будет создать конструктор
+        // нажимает энтер и конструктор появится в GroupHelper
+        navigationHeleper = new NavigationHeleper(wd);//12. Инициализируем NavigationHeleper прописываем в ручную
+        contactHelper = new ContactHelper(wd);
         login("admin", "secret");
     }
 
@@ -42,52 +51,20 @@ public class ApplicationManager {
         groupHelper.click(By.xpath("//form[@id='LoginForm']/input[3]"));
     }
 
-    public void initContactCreation() {
-        groupHelper.click(By.xpath("//*[@href='edit.php']"));
-    }
-
-
-    public void submitContactCreation() {
-        groupHelper.submitGroupCreation();
-    }
-
     public void stop() {
         wd.quit();
     }
 
-    public void fillContactForm(ContactData contactData) {
-        groupHelper.type(By.name("firstname"),contactData.getAlex());
-        groupHelper.type(By.name("lastname"),contactData.getGoldber());
-        groupHelper.type(By.name("nickname"),contactData.getGoldberalex());
-        groupHelper.type(By.name("company"),contactData.getF());
-        groupHelper.type(By.name("address"),contactData.getBearSheva());
-        groupHelper.type(By.name("home"),contactData.getBearSheba());
-    }
-
-    public void confirmAlert() {
-        wd.switchTo().alert().accept();
-    }
-
-    public void clickButtonDelete() {
-        groupHelper.click(By.xpath("//*[@value='Delete']"));
-    }
-
-    public void selectContact() {
-        groupHelper.selectGroup();
-    }
-    public int getContactCout() {
-        return wd.findElements(By.xpath("//*[@title='Details']")).size();
-    }
-
-    public int getContactCoutDeletion() {
-        return wd.findElements(By.xpath("//*[@title='Details']")).size();
-    }
-
+    //13. формируем конструктор Generate->Getter->navigationHeleper:NavigationHeleper
     public GroupHelper getGroupHelper() {
         return groupHelper;
     }
 
     public NavigationHeleper getNavigationHeleper() {
         return navigationHeleper;
+    }
+
+    public ContactHelper getContactHelper() {
+        return contactHelper;
     }
 }

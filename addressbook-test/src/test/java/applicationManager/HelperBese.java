@@ -17,7 +17,8 @@ public class HelperBese {
         wd.findElement(locator).sendKeys(text);
     }
 
-    public void click(By locator) {//чтобы создать этот метод нужно выделить любую строчку с click на конце и нажать Refactor->Extract->Parameter Object
+    public void click(By locator) {//чтобы создать этот метод нужно выделить любую строчку
+        // с click на конце и нажать Refactor->Extract->Parameter Object
         wd.findElement(locator).click();
     }
 }

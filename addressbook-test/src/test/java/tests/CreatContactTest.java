@@ -9,11 +9,11 @@ public class CreatContactTest extends TestBase {
 
     @Test
     public void CreatContactTest() {
-        int before = app.getContactCout();//посчитали группы до добавления
-        app.initContactCreation();
-        app.fillContactForm(new ContactData("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba"));
-        app.submitContactCreation();
-        int after = app.getContactCout();
+        int before = app.getContactHelper().getContactCout();//посчитали группы до добавления
+        app.getContactHelper().initContactCreation();
+        app.getContactHelper().fillContactForm(new ContactData("Alex", "Goldber", "Goldberalex", "F", "BearSheva", "BearSheba"));
+        app.getContactHelper().submitContactCreation();
+        int after = app.getContactHelper().getContactCout();
         Assert.assertEquals(after, before+1);
 
     }

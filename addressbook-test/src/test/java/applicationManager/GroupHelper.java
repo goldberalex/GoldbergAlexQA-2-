@@ -4,10 +4,11 @@ import model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class GroupHelper extends HelperBese {
+public class GroupHelper extends HelperBese {//15. создаем GroupHelper->extends HelperBese и создаем новый метод
+//16. и отправляем методы type, click на верх и вэб драйвер
 
     public GroupHelper(FirefoxDriver wd) {
-        super(wd);
+        super(wd);//9. мы даем ссылку из класса public class GroupHelper extends HelperBese в ручную
     }
 
     public int getGroupCout() {

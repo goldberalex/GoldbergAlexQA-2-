@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class GroupDeletionTest extends TestBase {
     @Test
     public void GroupDeletionTest(){
-        app.getNavigationHeleper().goToGroupsPage();
+        app.getNavigationHeleper().goToGroupsPage();//21. нужно прописать геттер getNavigationHeleper().
         int before = app.getGroupHelper().getGroupCoutDeletion();
         //выделяем строчку wd.findElements(By.name("selected[]")).size();
         // далее ctrl->alt-> называем этот метод getGroupCout, он спросит применить к остальным?,
