@@ -2,12 +2,13 @@ package applicationManager;
 
 import model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GroupHelper extends HelperBese {//15. создаем GroupHelper->extends HelperBese и создаем новый метод
 //16. и отправляем методы type, click на верх и вэб драйвер
 
-    public GroupHelper(FirefoxDriver wd) {
+    public GroupHelper(WebDriver wd) {
         super(wd);//9. мы даем ссылку из класса public class GroupHelper extends HelperBese в ручную
     }
 
@@ -15,8 +16,8 @@ public class GroupHelper extends HelperBese {//15. создаем GroupHelper->e
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public int getGroupCoutDeletion() {
-        return wd.findElements(By.name("selected[]")).size();
+    public void iniGroupCreation() {
+       click(By.name("new"));
     }
 
     public void fillGreoupForm(GroupData groupData) {

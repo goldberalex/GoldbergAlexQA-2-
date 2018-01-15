@@ -7,14 +7,14 @@ import org.testng.annotations.Test;
 public class ContactDeletionTest extends TestBase{
     @Test
    public void contactDeletionTest(){
-        int before = app.getContactHelper().getContactCoutDeletion();
+        int before = app.getContactHelper().getContactCout();
         //выделяем строчку wd.findElements(By.name("selected[]")).size();
         // далее ctrl->alt-> называем этот метод getContactCoutDeletion, он спросит применить к остальным?,
         // нажимаем кнопку ОК и далее метод что появится ниже перетаскиваем его в ApplicationManager
         app.getContactHelper().selectContact();
         app.getContactHelper().clickButtonDeleteContact();
         app.getContactHelper().confirmAlert();
-        int after = app.getContactHelper().getContactCoutDeletion();
+        int after = app.getContactHelper().getContactCout();
         Assert.assertEquals(after, before-1);
     }
 

@@ -10,7 +10,7 @@ public class CreatGroupTest extends TestBase {
     public void GreatGroupTest() {
         app.getNavigationHeleper().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
         int before = app.getGroupHelper().getGroupCout();//посчитали группы до добавления
-        iniGroupCreation();
+        app.getGroupHelper().iniGroupCreation();
         app.getGroupHelper().fillGreoupForm(new GroupData("name", "header", "footer"));
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToGropsPage();
@@ -18,7 +18,4 @@ public class CreatGroupTest extends TestBase {
         Assert.assertEquals(after, before+1);
 
     }
-
-
-
 }

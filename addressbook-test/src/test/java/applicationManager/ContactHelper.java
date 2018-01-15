@@ -2,17 +2,14 @@ package applicationManager;
 
 import model.ContactData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class ContactHelper extends HelperBese {
-    public ContactHelper(FirefoxDriver wd) {
+    public ContactHelper(WebDriver wd) {
         super(wd);//мы даем ссылку из класса public class ContactHelper extends HelperBese в ручную
     }
     public int getContactCout() {
-        return wd.findElements(By.xpath("//*[@title='Details']")).size();
-    }
-
-    public int getContactCoutDeletion() {
         return wd.findElements(By.xpath("//*[@title='Details']")).size();
     }
 
