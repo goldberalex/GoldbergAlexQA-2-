@@ -41,4 +41,12 @@ public class GroupHelper extends HelperBese {//15. создаем GroupHelper->e
     public void selectGroup() {
         click(By.name("selected[]"));
     }
+
+    public void initGroupModification() {
+        click(By.name("edit"));
+    }
+
+    public void confirmGroupModification() {
+        click(By.name("update"));
+    }
 }

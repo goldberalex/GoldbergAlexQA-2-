@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 
 public class ContactDeletionTest extends TestBase{
-    @Test
+    @Test//(enabled = false)//(enabled = false) означает что этот тест не запускать
    public void contactDeletionTest(){
         int before = app.getContactHelper().getContactCout();
         //выделяем строчку wd.findElements(By.name("selected[]")).size();

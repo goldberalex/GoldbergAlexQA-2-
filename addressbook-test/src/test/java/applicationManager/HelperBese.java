@@ -14,8 +14,10 @@ public class HelperBese {
 
     public void type(By locator, String text) {
         click(locator);//ctrl+alt+P и везде в скобках прописать locator
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if(text!=null){
+            wd.findElement(locator).clear();
+            wd.findElement(locator).sendKeys(text);
+        }
     }
 
     public void click(By locator) {//чтобы создать этот метод нужно выделить любую строчку
