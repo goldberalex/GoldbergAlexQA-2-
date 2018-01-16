@@ -8,8 +8,8 @@ public class SessinHelper extends HelperBese {
     public SessinHelper(WebDriver wd) {
         super(wd);
     }
-    public void openaddress(String url) {
 
+    public void openaddress(String url) {
         wd.get(url);
     }
 

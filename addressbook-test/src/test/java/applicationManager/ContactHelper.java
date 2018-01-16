@@ -30,12 +30,18 @@ public class ContactHelper extends HelperBese {
     }
 
     public void selectContact() {
-        click(By.name("selected[]"));
+        //click(By.name("selected[]"));
+        click(By.xpath("//*[@title='Edit']"));
+
     }
     public void clickButtonDeleteContact() {
         click(By.xpath("//*[@value='Delete']"));
     }
-    public void confirmAlert() {
-        wd.switchTo().alert().accept();
+
+    public void confirmContactModification() {
+        click(By.name("update"));
     }
+    //public void confirmAlert() {//Alert нужен если в selectContact() будет click(By.name("selected[]"));
+        //wd.switchTo().alert().accept();
+   // }
 }

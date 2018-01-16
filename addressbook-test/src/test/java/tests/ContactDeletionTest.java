@@ -13,7 +13,7 @@ public class ContactDeletionTest extends TestBase{
         // нажимаем кнопку ОК и далее метод что появится ниже перетаскиваем его в ApplicationManager
         app.getContactHelper().selectContact();
         app.getContactHelper().clickButtonDeleteContact();
-        app.getContactHelper().confirmAlert();
+        //app.getContactHelper().confirmAlert(); //Alert нужен если в selectContact() будет click(By.name("selected[]"));
         int after = app.getContactHelper().getContactCout();
         Assert.assertEquals(after, before-1);
     }
