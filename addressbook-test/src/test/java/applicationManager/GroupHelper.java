@@ -39,7 +39,12 @@ public class GroupHelper extends HelperBese {//15. создаем GroupHelper->e
     }
 
     public void selectGroup() {
+
         click(By.name("selected[]"));
+    }
+
+    public void selecGroupByIndex (int index){
+        wd.findElements(By.name("selected[]")).get(index).click();
     }
 
     public void initGroupModification() {
@@ -48,5 +53,16 @@ public class GroupHelper extends HelperBese {//15. создаем GroupHelper->e
 
     public void confirmGroupModification() {
         click(By.name("update"));
+    }
+
+    public boolean isThereAGroup() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public void createGroup(GroupData group) {
+        iniGroupCreation();
+        fillGreoupForm(group);
+        submitGroupCreation();
+        returnToGropsPage();
     }
 }

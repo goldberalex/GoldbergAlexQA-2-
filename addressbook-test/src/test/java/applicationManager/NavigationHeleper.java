@@ -14,7 +14,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
         public NavigationHeleper(WebDriver wd) {
             super(wd);//17. мы ссылку this.wd=wd; меняем на-> super(wd);
         }
+
         public void goToGroupsPage() {//14. это перенесли из ApplicationManager
+            if(isElementPresent(By.tagName("h1"))&& wd.findElement(By.tagName("h1")).getText().equals("Groups")
+                    && isElementPresent(By.name("new"))){
+                return;
+            }
             click(By.xpath("//*[@href='group.php']"));
         }
     }
