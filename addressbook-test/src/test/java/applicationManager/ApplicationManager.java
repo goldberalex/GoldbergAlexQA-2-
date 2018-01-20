@@ -40,7 +40,7 @@ public class ApplicationManager {//1.Наследует GroupHelper (снача�
 
         //6.перед всеми (wd)появится переуменная groupHelper !Эта переменная не нужна, ее нужно удалить везде где она появилась перед wb
 
-        wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         sessinHelper = new SessinHelper(wd);
         sessinHelper.openaddress("http://localhost/addressbook/");

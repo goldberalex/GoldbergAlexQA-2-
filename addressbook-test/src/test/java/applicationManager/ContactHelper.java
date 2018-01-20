@@ -32,8 +32,12 @@ public class ContactHelper extends HelperBese {
     public void selectContact() {
         //click(By.name("selected[]"));
         click(By.xpath("//*[@title='Edit']"));
-
     }
+
+    public void selecContactByIndex(int index) {
+        wd.findElements(By.xpath("//*[@title='Edit']")).get(index).click();
+    }
+
     public void clickButtonDeleteContact() {
         click(By.xpath("//*[@value='Delete']"));
     }
@@ -42,6 +46,18 @@ public class ContactHelper extends HelperBese {
         click(By.name("update"));
     }
     //public void confirmAlert() {//Alert нужен если в selectContact() будет click(By.name("selected[]"));
-        //wd.switchTo().alert().accept();
-   // }
+    //wd.switchTo().alert().accept();
+    // }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.xpath("//*[@title='Edit']"));
+
+    }
+
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(contact);
+        submitContactCreation();
+    }
+
 }
