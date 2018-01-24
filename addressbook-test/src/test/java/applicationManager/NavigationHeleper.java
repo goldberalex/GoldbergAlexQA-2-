@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
     public class NavigationHeleper extends HelperBese {//18. пишем extends HelperBese
 //19. и в этой строке нужно удалить вэб драйвер: FirefoxDriver wd;
         public NavigationHeleper(WebDriver wd) {
+
             super(wd);//17. мы ссылку this.wd=wd; меняем на-> super(wd);
         }
 

@@ -9,10 +9,15 @@ public class ContactDeletionTest extends TestBase{
     @Test//(enabled = false)//(enabled = false) означает что этот тест не запускать
    public void contactDeletionTest(){
         if (!app.getContactHelper().isThereAContact()){
-            app.getContactHelper().createContact(new ContactData("Alexandra", null, "Goldberalex", "A", "BearSheva", "BearSheba"));
+            app.getContactHelper().createContact(new ContactData().wihtAlex("Alex2")
+                    .wihtGoldber("Gold2")
+                    .wihtGoldberalex("GoldbergAlex2")
+                    .wihtF("F2")
+                    .wihtBearSheba("BR2")
+                    .wihtBearSheva("BR2"));
         }
         int before = app.getContactHelper().getContactCout();
-        app.getContactHelper(). selecContactByIndex(before-1);
+        app.getContactHelper().selecContactByIndex(before-1);
         //выделяем строчку wd.findElements(By.name("selected[]")).size();
         // далее ctrl->alt-> называем этот метод getContactCoutDeletion, он спросит применить к остальным?,
         // нажимаем кнопку ОК и далее метод что появится ниже перетаскиваем его в ApplicationManager

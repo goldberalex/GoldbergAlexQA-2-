@@ -8,18 +8,21 @@ public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
-        app.getNavigationHeleper().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
-        int before = app.getGroupHelper().getGroupCout();//посчитали группы до добавления
-        app.getGroupHelper().iniGroupCreation();
-        app.getGroupHelper().fillGreoupForm(new GroupData("name", null, "footer"));
+        app.goTo().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
+        int before = app.groups().getGroupCout();//посчитали группы до добавления
+        app.groups().iniGroupCreation();
+        app.groups().fillGreoupForm(new GroupData()
+                .wihtName("name")
+                .wihtHeader("g")
+                .wihtFooter("footer"));
         //вместо "header" поставили null нужно в HelperBese в метод type вписать:
         // if(text!=null){
         //    wd.findElement(locator).clear();
         //    wd.findElement(locator).sendKeys(text);
         //        }
-        app.getGroupHelper().submitGroupCreation();
-        app.getGroupHelper().returnToGropsPage();
-        int after = app.getGroupHelper().getGroupCout();//посчитали группы после добавления
+        app.groups().submitGroupCreation();
+        app.groups().returnToGropsPage();
+        int after = app.groups().getGroupCout();//посчитали группы после добавления
         Assert.assertEquals(after, before+1);
 
     }

@@ -59,11 +59,11 @@ public class ApplicationManager {//1.Наследует GroupHelper (снача�
     }
 
     //13. формируем конструктор Generate->Getter->navigationHeleper:NavigationHeleper
-    public GroupHelper getGroupHelper() {
+    public GroupHelper groups() {
         return groupHelper;
     }
 
-    public NavigationHeleper getNavigationHeleper() {
+    public NavigationHeleper goTo() {
         return navigationHeleper;
     }
 
@@ -75,3 +75,4 @@ public class ApplicationManager {//1.Наследует GroupHelper (снача�
         return sessinHelper;
     }
 }
+

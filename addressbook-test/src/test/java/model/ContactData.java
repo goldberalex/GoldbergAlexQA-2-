@@ -1,20 +1,41 @@
 package model;
 
 public class ContactData {
-    private final String alex;
-    private final String goldber;
-    private final String goldberalex;
-    private final String f;
-    private final String bearSheva;
-    private final String bearSheba;
+    private String alex;
+    private String goldber;
+    private String goldberalex;
+    private String f;
+    private String bearSheva;
+    private String bearSheba;
 
-    public ContactData(String alex, String goldber, String goldberalex, String f, String bearSheva, String bearSheba) {
+    public ContactData wihtAlex(String alex) {
         this.alex = alex;
+        return this;
+    }
+
+    public ContactData wihtGoldber(String goldber) {
         this.goldber = goldber;
+        return this;
+    }
+
+    public ContactData wihtGoldberalex(String goldberalex) {
         this.goldberalex = goldberalex;
+        return this;
+    }
+
+    public ContactData wihtF(String f) {
         this.f = f;
+        return this;
+    }
+
+    public ContactData wihtBearSheva(String bearSheva) {
         this.bearSheva = bearSheva;
+        return this;
+    }
+
+    public ContactData wihtBearSheba(String bearSheba) {
         this.bearSheba = bearSheba;
+        return this;
     }
 
     public String getAlex() {
