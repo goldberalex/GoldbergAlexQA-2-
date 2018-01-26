@@ -14,7 +14,9 @@ public class ContactHelper extends HelperBese {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements){
-            String lastname = element.findElement(By.xpath(By.)).getText();
+            String lastname = element.getText();
+            ContactData contact = new ContactData().wihtLastname(lastname);
+            contacts.add(contact);
         }
         return contacts;
     }
