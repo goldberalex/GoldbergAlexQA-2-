@@ -4,12 +4,15 @@ import model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class CreatGroupTest extends TestBase {
 
     @Test
     public void GreatGroupTest() {
         app.goTo().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
-        int before = app.groups().getGroupCout();//посчитали группы до добавления
+        List<GroupData> before = app.groups().getGroupList();
+        //int before = app.groups().getGroupCout();//посчитали группы до добавления
         app.groups().iniGroupCreation();
         app.groups().fillGreoupForm(new GroupData()
                 .wihtName("name")
@@ -22,8 +25,9 @@ public class CreatGroupTest extends TestBase {
         //        }
         app.groups().submitGroupCreation();
         app.groups().returnToGropsPage();
-        int after = app.groups().getGroupCout();//посчитали группы после добавления
-        Assert.assertEquals(after, before+1);
+        List<GroupData> after = app.groups().getGroupList();
+        //int after = app.groups().getGroupCout();//посчитали группы после добавления
+        Assert.assertEquals(after.size(), before.size()+1);
 
     }
 }

@@ -3,9 +3,22 @@ package applicationManager;
 import model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBese {
+
+    public List<ContactData> getContactList() {
+        List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> elements = wd.findElements(By.name("entry"));
+        for (WebElement element : elements){
+            String lastname = element.findElement(By.xpath(By.)).getText();
+        }
+        return contacts;
+    }
+
     public ContactHelper(WebDriver wd) {
         super(wd);//мы даем ссылку из класса public class ContactHelper extends HelperBese в ручную
     }
@@ -17,12 +30,12 @@ public class ContactHelper extends HelperBese {
         click(By.xpath("//*[@href='edit.php']"));
     }
     public void fillContactForm(ContactData contactData) {
-        type(By.name("firstname"),contactData.getAlex());
-        type(By.name("lastname"),contactData.getGoldber());
-        type(By.name("nickname"),contactData.getGoldberalex());
-        type(By.name("company"),contactData.getF());
-        type(By.name("address"),contactData.getBearSheva());
-        type(By.name("home"),contactData.getBearSheba());
+        type(By.name("firstname"),contactData.getFirstname());
+        type(By.name("lastname"),contactData.getLastname());
+        type(By.name("nickname"),contactData.getNickname());
+        type(By.name("company"),contactData.getCompany());
+        type(By.name("address"),contactData.getAddress());
+        type(By.name("home"),contactData.getHome());
     }
 
     public void submitContactCreation() {
@@ -59,5 +72,4 @@ public class ContactHelper extends HelperBese {
         fillContactForm(contact);
         submitContactCreation();
     }
-
 }

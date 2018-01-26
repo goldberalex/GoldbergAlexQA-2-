@@ -3,9 +3,25 @@ package applicationManager;
 import model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class GroupHelper extends HelperBese {//15. создаем GroupHelper->extends HelperBese и создаем новый метод
+import java.util.ArrayList;
+import java.util.List;
+
+public class GroupHelper extends HelperBese {
+
+    public List<GroupData> getGroupList(){
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+        for (WebElement element : elements){
+            String name = element.getText();
+            GroupData group = new GroupData().wihtName(name);
+            groups.add(group);
+        }
+     return groups;
+    }
+    //15. создаем GroupHelper->extends HelperBese и создаем новый метод
 //16. и отправляем методы type, click на верх и вэб драйвер
 
     public GroupHelper(WebDriver wd) {

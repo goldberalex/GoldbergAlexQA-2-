@@ -1,62 +1,62 @@
 package model;
 
 public class ContactData {
-    private String alex;
-    private String goldber;
-    private String goldberalex;
-    private String f;
-    private String bearSheva;
-    private String bearSheba;
+    private String firstname;
+    private String lastname;
+    private String nickname;
+    private String company;
+    private String address;
+    private String home;
 
-    public ContactData wihtAlex(String alex) {
-        this.alex = alex;
+    public ContactData wihtFirstname(String firstname) {
+        this.firstname = firstname;
         return this;
     }
 
-    public ContactData wihtGoldber(String goldber) {
-        this.goldber = goldber;
+    public ContactData wihtLastname(String lastname) {
+        this.lastname = lastname;
         return this;
     }
 
-    public ContactData wihtGoldberalex(String goldberalex) {
-        this.goldberalex = goldberalex;
+    public ContactData wihtNickname(String nickname) {
+        this.nickname = nickname;
         return this;
     }
 
-    public ContactData wihtF(String f) {
-        this.f = f;
+    public ContactData wihtCompany(String company) {
+        this.company = company;
         return this;
     }
 
-    public ContactData wihtBearSheva(String bearSheva) {
-        this.bearSheva = bearSheva;
+    public ContactData wihtAddress(String address) {
+        this.address = address;
         return this;
     }
 
-    public ContactData wihtBearSheba(String bearSheba) {
-        this.bearSheba = bearSheba;
+    public ContactData wihtHome(String home) {
+        this.home = home;
         return this;
     }
 
-    public String getAlex() {
-        return alex;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public String getGoldber() {
-        return goldber;
+    public String getLastname() {
+        return lastname;
     }
 
-    public String getGoldberalex() {
-        return goldberalex;
+    public String getNickname() {
+        return nickname;
     }
 
-    public String getF() {
-        return f;
+    public String getCompany() {
+        return company;
     }
 
-    public String getBearSheva() {
-        return bearSheva;
+    public String getAddress() {
+        return address;
     }
 
-    public String getBearSheba() { return bearSheba; }
+    public String getHome() { return home; }
 }

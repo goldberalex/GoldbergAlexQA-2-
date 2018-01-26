@@ -9,12 +9,13 @@ public class ContactDeletionTest extends TestBase{
     @Test//(enabled = false)//(enabled = false) означает что этот тест не запускать
    public void contactDeletionTest(){
         if (!app.getContactHelper().isThereAContact()){
-            app.getContactHelper().createContact(new ContactData().wihtAlex("Alex2")
-                    .wihtGoldber("Gold2")
-                    .wihtGoldberalex("GoldbergAlex2")
-                    .wihtF("F2")
-                    .wihtBearSheba("BR2")
-                    .wihtBearSheva("BR2"));
+            app.getContactHelper().createContact(new ContactData()
+                    .wihtFirstname("Alex2")
+                    .wihtLastname("Gold2")
+                    .wihtNickname("GoldbergAlex2")
+                    .wihtCompany("F2")
+                    .wihtHome("BR2")
+                    .wihtAddress("BR2"));
         }
         int before = app.getContactHelper().getContactCout();
         app.getContactHelper().selecContactByIndex(before-1);
