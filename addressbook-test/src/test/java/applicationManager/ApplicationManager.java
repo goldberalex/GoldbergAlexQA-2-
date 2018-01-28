@@ -67,7 +67,7 @@ public class ApplicationManager {//1.Наследует GroupHelper (снача�
         return navigationHeleper;
     }
 
-    public ContactHelper getContactHelper() {
+    public ContactHelper contacts() {
         return contactHelper;
     }
 

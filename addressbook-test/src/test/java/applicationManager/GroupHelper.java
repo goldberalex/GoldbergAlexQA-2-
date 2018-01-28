@@ -15,6 +15,7 @@ public class GroupHelper extends HelperBese {
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements){
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             String name = element.getText();
             GroupData group = new GroupData().wihtName(name);
             groups.add(group);
@@ -63,11 +64,13 @@ public class GroupHelper extends HelperBese {
     }
 
     public void initGroupModification() {
-        click(By.name("edit"));
+        //click(By.name("edit"));
+        wd.findElement(By.name("edit")).click();
     }
 
     public void confirmGroupModification() {
-        click(By.name("update"));
+        //click(By.name("update"));
+        wd.findElement(By.name("update")).click();
     }
 
     public boolean isThereAGroup() {

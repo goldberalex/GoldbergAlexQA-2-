@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class ContactData {
     private String firstname;
     private String lastname;
@@ -59,4 +61,35 @@ public class ContactData {
     }
 
     public String getHome() { return home; }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", company='" + company + '\'' +
+                ", address='" + address + '\'' +
+                ", home='" + home + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return Objects.equals(firstname, that.firstname) &&
+                Objects.equals(lastname, that.lastname) &&
+                Objects.equals(nickname, that.nickname) &&
+                Objects.equals(company, that.company) &&
+                Objects.equals(address, that.address) &&
+                Objects.equals(home, that.home);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(firstname, lastname, nickname, company, address, home);
+    }
 }
