@@ -18,7 +18,7 @@ public class GroupDeletionTest extends TestBase {
         }
         List<GroupData> before = app.groups().getGroupList();
         //int before = app.groups().getGroupCout();
-        app.groups().selecGroupByIndex(before.size() - 1);
+        app.groups().selecGroupByIndex(before.size()-1);
         //выделяем строчку wd.findElements(By.name("selected[]")).size();
         // далее ctrl->alt-> называем этот метод getGroupCout, он спросит применить к остальным?,
         // нажимаем кнопку ОК и далее метод что появится ниже перетаскиваем его в ApplicationManager

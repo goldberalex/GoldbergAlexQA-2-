@@ -10,8 +10,9 @@ public class GroupData {
 
 
 
-    public void wihtId(int id) {
+    public GroupData wihtId(int id) {
         this.id = id;
+        return this;
     }
 
     public GroupData wihtName(String name) {

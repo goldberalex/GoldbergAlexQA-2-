@@ -21,6 +21,7 @@ public class GroupModificationTests extends TestBase {
         //app.groups().selectGroup();
         app.groups().selecGroupByIndex(before.size()-1);
         app.groups().initGroupModification();//это клик на кнопку Edit group
+
         GroupData group = new GroupData()
                 .wihtId(before.get(before.size()-1).getId())
                 .wihtName("name");
@@ -29,6 +30,7 @@ public class GroupModificationTests extends TestBase {
         app.groups().confirmGroupModification();//это клик на кнопку Update;
         app.groups().returnToGropsPage();
         List<GroupData> after = app.groups().getGroupList();
+
         Assert.assertEquals(before.size(), after.size());
         before.remove(before.size()-1);
         before.add(group);
