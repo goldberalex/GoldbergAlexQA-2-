@@ -26,6 +26,7 @@ public class GroupDeletionTest extends TestBase {
         app.groups().clickButtonDeleteGroup();
         app.groups().returnToGropsPage();
         List<GroupData> after = app.groups().getGroupList();
+        System.out.print(after);
         //int after = app.groups().getGroupCout();
         //Assert.assertEquals(after, before-1);
         Assert.assertEquals(after.size(), before.size() - 1);

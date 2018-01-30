@@ -10,6 +10,7 @@ public class CreatContactTest extends TestBase {
 
     @Test
     public void CreatContactTest() {
+        app.goTo().goAddressbook();
         List<ContactData> before = app.contacts().getContactList();
         //int before = app.getContactHelper().getContactCout();//посчитали группы до добавления
         app.contacts().initContactCreation();

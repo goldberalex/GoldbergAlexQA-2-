@@ -29,10 +29,13 @@ public class ContactDeletionTest extends TestBase{
         app.contacts().clickButtonDeleteContact();
         //app.getContactHelper().confirmAlert(); //Alert нужен если в selectContact() будет click(By.name("selected[]"));
        List<ContactData> after = app.contacts().getContactList();
+        System.out.print(after);
+
         //int after = app.getContactHelper().getContactCout();
         Assert.assertEquals(after.size(), before.size()-1);
 
         before.remove(before.size()-1);
         Assert.assertEquals(before,after);
+
     }
 }

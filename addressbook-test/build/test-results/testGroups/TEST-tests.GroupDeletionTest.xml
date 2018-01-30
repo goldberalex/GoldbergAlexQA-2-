@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.GroupDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-29T18:41:47" hostname="LAPTOP-6RPQ1USP" time="1.303">
+  <properties/>
+  <testcase name="GroupDeletionTest" classname="tests.GroupDeletionTest" time="1.303"/>
+  <system-out><![CDATA[[GroupData{id=0, name='name'}, GroupData{id=0, name='name'}, GroupData{id=0, name='name'}, GroupData{id=0, name='name'}]]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -23,5 +23,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
             }
             click(By.xpath("//*[@href='group.php']"));
         }
+
+    public void goAddressbook() {
+            click(By.id("logo"));
     }
+}
 //это класс делаем простым добавлением

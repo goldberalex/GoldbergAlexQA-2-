@@ -14,3 +14,8 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-java:3.8.1'
     compile 'org.testng:testng:6.13.1'
 }
+task testGroups(type:Test){
+    useTestNG{
+        suites 'src/test/resources/testng-groups.xml'
+    }
+}
