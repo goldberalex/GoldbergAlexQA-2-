@@ -17,13 +17,15 @@ public class ContactModificationTests extends TestBase {
                     .wihtNickname("GoldbergAlex2")
                     .wihtCompany("F2")
                     .wihtHome("BR2")
-                    .wihtAddress("BR2"));
+                    .wihtAddress("BR2")
+                    .wihtGroup("name"));
         }
         app.contacts().selecContactByIndex(before.size()-1);
         ContactData contact = new ContactData()
                 .wihtId(before.get(before.size()-1).getId())
                 .wihtFirstname("Alex2")
-                .wihtLastname("Gold2");
+                .wihtLastname("Gold2")
+                .wihtGroup("name");
         //app.contacts().selectContact();
         app.contacts().fillContactForm(contact);
         app.contacts().confirmContactModification();

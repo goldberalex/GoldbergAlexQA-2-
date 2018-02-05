@@ -17,7 +17,8 @@ public class ContactDeletionTest extends TestBase{
                     .wihtNickname("GoldbergAlex2")
                     .wihtCompany("F2")
                     .wihtHome("BR2")
-                    .wihtAddress("BR2"));
+                    .wihtAddress("BR2")
+                    .wihtGroup("name"));
         }
         List<ContactData> before = app.contacts().getContactList();
         //int before = app.getContactHelper().getContactCout();

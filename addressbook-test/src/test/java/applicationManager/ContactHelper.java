@@ -4,6 +4,7 @@ import model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class ContactHelper extends HelperBese {
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             String lastname = element.findElement(By.xpath(".//td[2]")).getText();
             String firstName = element.findElement(By.xpath(".//td[3]")).getText();
+
             contacts.add(new ContactData().wihtId(id).wihtFirstname(firstName).wihtLastname(lastname));
         }
         return contacts;
@@ -39,6 +41,7 @@ public class ContactHelper extends HelperBese {
         type(By.name("company"),contactData.getCompany());
         type(By.name("address"),contactData.getAddress());
         type(By.name("home"),contactData.getHome());
+        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     }
 
     public void submitContactCreation() {

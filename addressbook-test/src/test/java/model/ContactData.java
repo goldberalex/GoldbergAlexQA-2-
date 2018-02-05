@@ -10,8 +10,13 @@ public class ContactData {
     private String company;
     private String address;
     private String home;
+    private String group;
 
 
+    public ContactData wihtGroup(String group) {
+        this.group = group;
+        return this;
+    }
 
     public ContactData wihtId(int id) {
         this.id = id;
@@ -48,6 +53,7 @@ public class ContactData {
         return this;
     }
 
+    public String getGroup() {return group; }
     public int getId() {
         return id;
     }
@@ -81,13 +87,14 @@ public class ContactData {
         ContactData that = (ContactData) o;
         return id == that.id &&
                 Objects.equals(firstname, that.firstname) &&
-                Objects.equals(lastname, that.lastname);
+                Objects.equals(lastname, that.lastname) &&
+                Objects.equals(group, that.group);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, firstname, lastname);
+        return Objects.hash(id, firstname, lastname, group);
     }
 
     @Override
@@ -96,6 +103,7 @@ public class ContactData {
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", group='" + group + '\'' +
                 '}';
     }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ContactDeletionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-31T18:46:57" hostname="LAPTOP-6RPQ1USP" time="6.163">
+  <properties/>
+  <testcase name="contactDeletionTest" classname="tests.ContactDeletionTest" time="6.163"/>
+  <system-out><![CDATA[[ContactData{id=76, firstname='Alex2', lastname='Gold2'}, ContactData{id=78, firstname='Alex2', lastname='Gold2'}, ContactData{id=79, firstname='Alex2', lastname='Gold2'}, ContactData{id=80, firstname='Alex2', lastname='Gold2'}, ContactData{id=81, firstname='Alex2', lastname='Gold2'}, ContactData{id=82, firstname='Alex2', lastname='Gold2'}, ContactData{id=91, firstname='Alex2', lastname='Gold2'}, ContactData{id=92, firstname='Alex2', lastname='Gold2'}]]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

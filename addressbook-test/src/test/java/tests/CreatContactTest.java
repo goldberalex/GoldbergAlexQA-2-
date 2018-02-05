@@ -20,7 +20,8 @@ public class CreatContactTest extends TestBase {
                 .wihtNickname("GoldbergAlex2")
                 .wihtCompany("F2")
                 .wihtHome("BR2")
-                .wihtAddress("BR2"));
+                .wihtAddress("BR2")
+                .wihtGroup("name"));
         app.contacts().submitContactCreation();
         List<ContactData> after=app.contacts().getContactList();
         //int after = app.getContactHelper().getContactCout();
