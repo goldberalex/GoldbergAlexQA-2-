@@ -10,11 +10,12 @@ public class ContactData {
     private String company;
     private String address;
     private String home;
-    private String group;
+    private String birthday;
 
 
-    public ContactData wihtGroup(String group) {
-        this.group = group;
+
+    public ContactData wihBirthday(String birthday) {
+        this.birthday = birthday;
         return this;
     }
 
@@ -53,7 +54,6 @@ public class ContactData {
         return this;
     }
 
-    public String getGroup() {return group; }
     public int getId() {
         return id;
     }
@@ -79,6 +79,7 @@ public class ContactData {
     }
 
     public String getHome() { return home; }
+    public String getBirthday() { return birthday; }
 
     @Override
     public boolean equals(Object o) {
@@ -88,13 +89,13 @@ public class ContactData {
         return id == that.id &&
                 Objects.equals(firstname, that.firstname) &&
                 Objects.equals(lastname, that.lastname) &&
-                Objects.equals(group, that.group);
+                Objects.equals(birthday, that.birthday);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, firstname, lastname, group);
+        return Objects.hash(id, firstname, lastname, birthday);
     }
 
     @Override
@@ -103,8 +104,7 @@ public class ContactData {
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", group='" + group + '\'' +
+                ", birthday='" + birthday + '\'' +
                 '}';
     }
-
 }

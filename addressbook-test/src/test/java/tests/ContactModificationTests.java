@@ -18,14 +18,14 @@ public class ContactModificationTests extends TestBase {
                     .wihtCompany("F2")
                     .wihtHome("BR2")
                     .wihtAddress("BR2")
-                    .wihtGroup("name"));
+                    .wihBirthday("1"));
         }
         app.contacts().selecContactByIndex(before.size()-1);
         ContactData contact = new ContactData()
                 .wihtId(before.get(before.size()-1).getId())
                 .wihtFirstname("Alex2")
                 .wihtLastname("Gold2")
-                .wihtGroup("name");
+                .wihBirthday("1");
         //app.contacts().selectContact();
         app.contacts().fillContactForm(contact);
         app.contacts().confirmContactModification();
@@ -34,5 +34,6 @@ public class ContactModificationTests extends TestBase {
         Assert.assertEquals(before.size(), after.size());
         before.add(contact);
         Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(before));
+
     }
 }

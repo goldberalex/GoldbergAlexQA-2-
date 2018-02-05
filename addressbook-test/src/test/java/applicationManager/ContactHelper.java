@@ -41,7 +41,7 @@ public class ContactHelper extends HelperBese {
         type(By.name("company"),contactData.getCompany());
         type(By.name("address"),contactData.getAddress());
         type(By.name("home"),contactData.getHome());
-        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+        new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBirthday());
     }
 
     public void submitContactCreation() {

@@ -21,7 +21,7 @@ public class CreatContactTest extends TestBase {
                 .wihtCompany("F2")
                 .wihtHome("BR2")
                 .wihtAddress("BR2")
-                .wihtGroup("name"));
+                .wihBirthday("1"));//выпадающие списки
         app.contacts().submitContactCreation();
         List<ContactData> after=app.contacts().getContactList();
         //int after = app.getContactHelper().getContactCout();
