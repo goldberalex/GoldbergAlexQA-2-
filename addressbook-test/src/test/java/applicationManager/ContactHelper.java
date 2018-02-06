@@ -19,7 +19,10 @@ public class ContactHelper extends HelperBese {
             String lastname = element.findElement(By.xpath(".//td[2]")).getText();
             String firstName = element.findElement(By.xpath(".//td[3]")).getText();
 
-            contacts.add(new ContactData().wihtId(id).wihtFirstname(firstName).wihtLastname(lastname));
+            ContactData contact = new ContactData().wihtId(id).wihtFirstname(firstName).wihtLastname(lastname);
+            contacts.add(contact);
+
+            //contacts.add(new ContactData().wihtId(id).wihtFirstname(firstName).wihtLastname(lastname));
         }
         return contacts;
     }

@@ -14,7 +14,7 @@ public class ContactData {
 
 
 
-    public ContactData wihBirthday(String birthday) {
+    public ContactData wihtBirthday(String birthday) {
         this.birthday = birthday;
         return this;
     }

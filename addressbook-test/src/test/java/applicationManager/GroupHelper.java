@@ -17,6 +17,7 @@ public class GroupHelper extends HelperBese {
         for (WebElement element : elements){
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             String name = element.getText();
+
             GroupData group = new GroupData().wihtName(name);
             groups.add(group);
         }

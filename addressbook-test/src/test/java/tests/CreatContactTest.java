@@ -2,26 +2,41 @@ package tests;
 
 import model.ContactData;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class CreatContactTest extends TestBase {
+    @DataProvider
+    public Iterator<Object[]> validContacts() throws IOException {
+        List<Object[]> list = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.csv")));
+        String line = reader.readLine();
+        while (line!=null){
+            String[] split= line.split(";");
+            list.add(new Object[] {new ContactData()
+                    .wihtFirstname(split[0])
+                    .wihtLastname(split[1])
+                    .wihtNickname(split[2])
+                    .wihtCompany(split[3])
+                    .wihtAddress(split[4])
+                    .wihtHome(split[5])});
+            line = reader.readLine();
+        }
+        return  list.iterator();
+    }
 
-    @Test
-    public void CreatContactTest() {
+        @Test(dataProvider = "validContacts")
+    public void CreatContactTest(ContactData contact) {
         app.goTo().goAddressbook();
         List<ContactData> before = app.contacts().getContactList();
         //int before = app.getContactHelper().getContactCout();//посчитали группы до добавления
         app.contacts().initContactCreation();
-        app.contacts().fillContactForm(new ContactData()
-                .wihtFirstname("Alex2")
-                .wihtLastname("Gold2")
-                .wihtNickname("GoldbergAlex2")
-                .wihtCompany("F2")
-                .wihtHome("BR2")
-                .wihtAddress("BR2")
-                .wihBirthday("1"));//выпадающие списки
+        app.contacts().fillContactForm(contact);//выпадающие списки
         app.contacts().submitContactCreation();
         List<ContactData> after=app.contacts().getContactList();
         //int after = app.getContactHelper().getContactCout();
