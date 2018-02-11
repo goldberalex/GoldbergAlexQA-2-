@@ -37,6 +37,7 @@ public class ContactHelper extends HelperBese {
     public void initContactCreation() {
         click(By.xpath("//*[@href='edit.php']"));
     }
+
     public void fillContactForm(ContactData contactData) {
         type(By.name("firstname"),contactData.getFirstname());
         type(By.name("lastname"),contactData.getLastname());
@@ -44,7 +45,7 @@ public class ContactHelper extends HelperBese {
         type(By.name("company"),contactData.getCompany());
         type(By.name("address"),contactData.getAddress());
         type(By.name("home"),contactData.getHome());
-        new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBirthday());
+       //new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBirthday());//это выпадающие списки
     }
 
     public void submitContactCreation() {

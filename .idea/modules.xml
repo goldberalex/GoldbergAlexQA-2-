@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-.iml" filepath="$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-_main.iml" group="GoldbergAlexQA-2-" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GoldbergAlexQA-2-_test.iml" group="GoldbergAlexQA-2-" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test_main.iml" group="TestNg-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test_test.iml" group="TestNg-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test_main.iml" group="addressbook-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-test_test.iml" group="addressbook-test" />

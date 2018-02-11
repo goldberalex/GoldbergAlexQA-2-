@@ -20,7 +20,7 @@ public class ContactDataGenerator {
     private static void save(List<ContactData> contacts, File file) throws IOException {
         Writer writer = new FileWriter(file);
         for (ContactData contact:contacts){
-            writer.write(String.format("%s;%s;%s%;%s;%s;%s;%s\n",
+            writer.write(String.format("%s;%s;%s;%s;%s;%s\n",
                     contact.getFirstname(),
                     contact.getLastname(),
                     contact.getNickname(),
