@@ -1,6 +1,8 @@
 package tests;
 
 import model.GroupData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -12,6 +14,8 @@ import java.util.List;
 
 
 public class CreatGroupTest extends TestBase {
+    Logger logger = LoggerFactory.getLogger(CreatGroupTest.class);
+
     @DataProvider
     public Iterator<Object[]> validGroups() throws IOException {
         List<Object[]> list = new ArrayList<>();
@@ -31,6 +35,7 @@ public class CreatGroupTest extends TestBase {
 
     @Test (dataProvider = "validGroups")
     public void GreatGroupTest(GroupData group) {
+        logger.info("Start test CreatGroupTest");
         app.goTo().goToGroupsPage();//20. нужно прописать геттер getNavigationHeleper().
         List<GroupData> before = app.groups().getGroupList();
         //int before = app.groups().getGroupCout();//посчитали группы до добавления
@@ -46,6 +51,7 @@ public class CreatGroupTest extends TestBase {
         List<GroupData> after = app.groups().getGroupList();
         //int after = app.groups().getGroupCout();//посчитали группы после добавления
         Assert.assertEquals(after.size(), before.size()+1);
+        logger.info("Stop test CreatGroupTest");
 
     }
 }
