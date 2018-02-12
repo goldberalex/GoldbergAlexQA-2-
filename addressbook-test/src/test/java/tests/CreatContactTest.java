@@ -44,4 +44,22 @@ public class CreatContactTest extends TestBase {
         Assert.assertEquals(after.size(), before.size()+1);
 
     }
+    @Test
+    public void CreatContactTestwithPhoto() {
+        app.goTo().goAddressbook();
+        List<ContactData> before = app.contacts().getContactList();
+        //int before = app.getContactHelper().getContactCout();//посчитали группы до добавления
+        app.contacts().initContactCreation();
+        File photo = new File("src/test/resources/photo.jpg");
+        app.contacts().fillContactForm(new ContactData()
+                .wihtFirstname("test1")
+                .wihtLastname("Test1")
+                .wihtPhoto(photo));
+        app.contacts().submitContactCreation();
+        List<ContactData> after=app.contacts().getContactList();
+        //int after = app.getContactHelper().getContactCout();
+        //Assert.assertEquals(after, before+1);
+        Assert.assertEquals(after.size(), before.size()+1);
+
+    }
 }

@@ -1,5 +1,6 @@
 package model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ContactData {
@@ -11,8 +12,15 @@ public class ContactData {
     private String address;
     private String home;
     private String birthday;
+    private File photo;
 
 
+
+
+    public ContactData wihtPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
 
     public ContactData wihtBirthday(String birthday) {
         this.birthday = birthday;
@@ -80,6 +88,7 @@ public class ContactData {
 
     public String getHome() { return home; }
     public String getBirthday() { return birthday; }
+    public File getPhoto() { return photo; }
 
     @Override
     public boolean equals(Object o) {

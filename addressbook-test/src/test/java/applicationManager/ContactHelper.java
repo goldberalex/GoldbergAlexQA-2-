@@ -45,6 +45,7 @@ public class ContactHelper extends HelperBese {
         type(By.name("company"),contactData.getCompany());
         type(By.name("address"),contactData.getAddress());
         type(By.name("home"),contactData.getHome());
+        attach(By.name("photo"), contactData.getPhoto());//добавление файла
        //new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getBirthday());//это выпадающие списки
     }
 

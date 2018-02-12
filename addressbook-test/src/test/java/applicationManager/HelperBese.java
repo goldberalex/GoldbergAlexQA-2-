@@ -6,6 +6,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+
 public class HelperBese {
     WebDriver wd;
 
@@ -18,6 +20,12 @@ public class HelperBese {
         if(text!=null){
             wd.findElement(locator).clear();
             wd.findElement(locator).sendKeys(text);
+        }
+    }
+
+    public void attach(By locator, File file) {//добавление файла
+        if(file!=null){
+            wd.findElement(locator).sendKeys(file.getAbsolutePath());
         }
     }
 
