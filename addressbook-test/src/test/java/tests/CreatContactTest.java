@@ -63,7 +63,7 @@ public class CreatContactTest extends TestBase {
 
     }
     @Test
-    public void getCurrentURL(){
+    public void getCurrentURL(){//проверяет правильность указазанного абсолютного пути
         File curr = new File(".");
         System.out.println(curr.getAbsolutePath());
     }
