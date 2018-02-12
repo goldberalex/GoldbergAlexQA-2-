@@ -62,4 +62,9 @@ public class CreatContactTest extends TestBase {
         Assert.assertEquals(after.size(), before.size()+1);
 
     }
+    @Test
+    public void getCurrentURL(){
+        File curr = new File(".");
+        System.out.println(curr.getAbsolutePath());
+    }
 }
