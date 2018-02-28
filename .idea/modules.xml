@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookTrello.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookTrello.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookTrello_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookTrello_main.iml" group="addressbookTrello" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookTrello_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookTrello_test.iml" group="addressbookTrello" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitsTests.iml" filepath="$PROJECT_DIR$/.idea/modules/unitsTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitsTests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/unitsTests_main.iml" group="unitsTests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitsTests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/unitsTests_test.iml" group="unitsTests" />
     </modules>
   </component>
 </project>

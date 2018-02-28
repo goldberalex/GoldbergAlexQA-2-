@@ -1,0 +1,20 @@
+21:24:39.864 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@42e25b0b
+21:24:51.362 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:51.363 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@352ff4da
+21:24:52.686 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:52.686 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@295cf707
+21:24:54.227 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:54.228 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@1b266842
+21:24:55.982 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:55.982 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@bb9e6dc
+21:24:57.785 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:57.785 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@39d76cb5
+21:24:59.605 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:24:59.605 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@1cb346ea
+21:25:01.630 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:25:01.633 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@e3c0e40
+21:25:03.853 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:25:03.853 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@479cbee5
+21:25:06.211 [main] INFO  tests.TestBase - Stop test GreatGroupTest
+21:25:06.211 [main] INFO  tests.TestBase - Start test GreatGroupTest with parameter [Ljava.lang.Object;@12299890
+21:25:08.875 [main] INFO  tests.TestBase - Stop test GreatGroupTest
