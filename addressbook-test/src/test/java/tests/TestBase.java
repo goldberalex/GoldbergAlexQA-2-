@@ -14,6 +14,7 @@ public abstract class TestBase {// это мы делаем Refactor+Extract+Rep
     protected static ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
+
     @BeforeSuite
     public void setUp() throws Exception {
         app.start();
