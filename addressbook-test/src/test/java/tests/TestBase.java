@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 
 public abstract class TestBase {// это мы делаем Refactor+Extract+Replace Inheritance with Delegation
 
-    protected static ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
+    protected static ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX/*CHROME*/);
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 

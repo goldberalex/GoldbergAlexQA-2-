@@ -28,7 +28,8 @@ public class ApplicationManager {//1.Наследует GroupHelper (снача�
 // и здесь нужно !обязательно поставить галочку Generate getter
     public void start() {
         //String browser = BrowserType.FIREFOX; мы его вызывали что бы построить всю систему, теперь вместо его работает конструктор public ApplicationManager(String browser) {this.browser = browser;}
-        if(browser.equals(BrowserType.FIREFOX)){
+        if(browser.equals(BrowserType.FIREFOX)){//указываем путь и к какой мазиле должен обратиться
+            System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox esr\\firefox.exe");//здесь мы прописываем обращение к другой версии мазилы
             wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         }else
             if(browser.equals(BrowserType.CHROME)){
